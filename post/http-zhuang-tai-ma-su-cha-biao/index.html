@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>HTTP状态码速查表 | 知行合一</title>
+<meta name="description" content="那我自己来吧">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://coolcui.github.io/favicon.ico?v=1556930885830">
+<link rel="stylesheet" href="http://coolcui.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://coolcui.github.io">
+        <img src="http://coolcui.github.io/images/avatar.png?v=1556930885830" class="site-logo">
+        <h1 class="site-title">知行合一</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      那我自己来吧
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">himi</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">HTTP状态码速查表</h2>
+            <div class="post-date">2019-05-04</div>
+            
+            <div class="post-content">
+              <p>HTTP状态码(HTTP status code)是网页服务器超文本传输协议HTTP的响应状态码(response status code)，长度为3位数字。状态码是服务器对客户端的请求的回复，主要是由RFC2616规范所定义，由其它规范所扩展，并由互联网号码分配局IANA维护。</p>
+<!-- more -->
+<p>HTTP状态码的第一位数字定义了响应类别，后两位数字表示在该类别下的细分状态。下面是常用的HTTP状态码速查表。</p>
+<p>名	英文	含义
+1xx	Informational	消息。表示服务器已收到请求，正在处理，请客户端等待最终响应
+100	Continue	继续。请求头request header已接收，请客户端继续发送请求体request body
+101	Switching Protocols	切换协议。通过Upgrade消息头通知客户端采用不同的协议来完成这个请求。
+102	Processing	处理中。表示​​服务器已经收到请求正在处理，暂无响应可用。
+2xx	Successful	成功。表示请求已被服务器成功接收、理解和接受。
+200	OK	成功。响应头或数据体将在此响应中返回。
+201	Created	已创建。表示一个新的资源已经依据请求的需要而建立，返回的Location头信息中有该资源的URI。
+202	Accepted	已接受。表示服务器已接受请求，但尚未处理。
+203	Non-Authoritative Information	表示请求已成功，但是响应是被代理服务器proxy修改后的版本。
+204	No Content	没有内容。服务器成功处理了请求，但没有返回任何内容。
+205	Reset Content	重置内容。服务器成功处理了请求，但没有返回任何内容，同时要求客户端重置文档视图。
+206	Partial Content	部分内容。表示服务器已经成功处理了部分GET请求，FlashGet、迅雷等HTTP下载工具就是使用此类响应实现断点续传。
+207	Multi-Status	多状态(WebDAV)。表示之后的消息体将是一个XML消息。WebDAV是一种基于HTTP1.1的通信协议。
+208	Already Reported	已经报告(WebDAV)。表示DAV绑定的成员已经在(多状态)响应之前被枚举，不会被再次包括。
+226	IM Used	IM Used是Instance Manipulation Used的缩写。该响应是对当前实例的一个或多个实例操作的结果表示，表示服务器已完成对资源的请求。
+3xx	Redirection	重定向。表示客户端需要进一步的操作才能完成请求，通常是重定向，重定向地址在本次响应的Location域中指明。
+300	Multiple Choices	多种选择。被请求的资源有选择，客户端可以选择一个地址进行重定向。一般服务器会在返回的Location域中给出一个首选的URI。
+301	Moved Permanently	永久移动。被请求的资源已经永久移动到新位置，返回的Location域中将给出这个永久的URI，但HEAD请求除外。
+302	Found	Found又叫Moved Temporarily，临时移动。要求客户端进行临时重定向，返回的Location域中将给出临时的URI，但HEAD请求除外。
+303	See Other	查看其它。表示当前请求的响应可以在另一个URI上找到，返回的Location域中将给出新的URI，但HEAD请求除外。
+304	Not Modified	未修改。表示资源在请求头中的参数If-Modified-Since或If-None-Match指定的版本之后未曾被修改。
+305	Use Proxy	使用代理。表示被请求的资源必须通过指定的代理才能被访问，返回的Location域中将给出指定的代理URI。
+306	Switch Proxy	最初是指后续请求应使用指定的代理，但在最新版的规范中，306状态码已经不再使用。
+307	Temporary Redirect	临时重定向。该请求应该使用另一个URI进行，但后续的请求仍然使用原来的URI进行。
+308	Permanent Redirect	永久重定向。所有请求应该使用另一个URI进行。
+4xx	Client Error	客户端错误。表示客户端发生了错误，导致服务器无法完成请求。
+400	Bad Request	坏请求。客户端请求的语法、格式、大小等有错误，服务器不能或不会处理该请求。
+401	Unauthorized	未验证。表示当前请求需要用户验证。
+402	Payment Required	为将来预留的，可能用于支付相关。
+403	Forbidden	禁止。表示服务器接受了请求但拒绝执行。
+404	Not Found	没有发现。表示请求的资源在服务器上没有发现。
+405	Method Not Allowed	方法不允许。表示请求中指定的方法不被允许执行，例如用错了GET、POST、PUT或DELETE方法。
+406	Not Acceptable	不可接受。表示服务器无法满足请求头中的条件，无法生成响应实体。
+407	Proxy Authentication Required	和401类似，这里表示客户端必须在代理服务器上进行身份验证。
+408	Request Timeout	请求超时。客户端没有在服务器指定的等待时间内完成一个请求的发送。
+409	Conflict	冲突。表示因为请求存在冲突，服务器无法处理。
+410	Gone	没了。表示所请求的资源没了，被删除了。也可使用404。
+5xx	Server Error	服务器错误。表示服务器在处理请求时发生了错误。
+500	Internal Server Error	服务器内部错误。因此无法完成对请求的处理。
+501	Not Implemented	没实现。表示服务器没这个功能
+502	Bad Gateway	坏网关。表示网关或代理服务器从上游服务器收到无效的响应。
+503	Service Unavailable	服务不可用。一般是暂时的，服务器超载了或在进行系统维护。
+504	Gateway Timeout	网关超时。表示网关或代理服务器未能从上游服务器收到响应。
+505	HTTP Version Not Supported</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="http://coolcui.github.io/tag/T7Kw7_8LK" class="tag">
+                    技术
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://coolcui.github.io/post/ha-fo-shang-xue-yuan-zui-shou-huan-ying-de-ling-dao-ke">
+                  <h3 class="post-title">
+                    哈佛商学院最受欢迎的领导课
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
