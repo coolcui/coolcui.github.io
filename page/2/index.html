@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>什么是base64编码？ | 知行合一</title>
+<title>知行合一</title>
 <meta name="description" content="那我自己来吧">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -90,46 +90,33 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">什么是base64编码？</h2>
-            <div class="post-date">2019-05-14</div>
-            
-            <div class="post-content">
-              <p>Base64编码是一个用64个可见的ASCII字符，来表示一堆二进制数的编码方法。所有的二进制数据，不管可见不可见，都可以表示为可见的文本形式的ASCII字符串。</p>
-<!-- more -->
-<p>文本虽然可见，但一般仍然是ASCII字符乱码，需要Base64解码才能看懂。</p>
-<p>Base64编码表（Base64 index table）：
-<img src="http://coolcui.github.io/post-images/1557820988471.jpg" alt=""></p>
-<p>把这一堆二进制数，按6位bit分为一组，其值最小是000000，也就是0；最大是111111，也就是63。从0到63每个值都称为一个Base64索引（Base64 index）。每个Base64索引都对应了一个ASCII字符：一共使用了64个ASCII字符，大写字母A-Z、小写字母a-z、数字0-9，以及加号&quot;+&quot;和斜杠&quot;/&quot;。</p>
-<p>把每个Base64索引，替换为对应的字符，这样一堆二进制数就变成了一堆ASCII字符，这就是Base64编码。</p>
-<p>因为一个Base64索引是6位bit，而一个字节是8位bit，所以在编码时为了好处理，都会凑够24位bit（也就是3个字节），这样就可以表示为4个Base64索引。简单说，3个字节=4个Base64索引。</p>
-<p>如果这一堆二进制数凑不成3个字节的整数怎么办？那就在后面添加0，这个0是Base64编码的后缀，用等号&quot;=&quot;表示。总字节数除以3，余数只能是0、1或2，因此一般添加1个0或2个0。</p>
-<p>Base64编码主要用于使用文本协议传输二进制数据，比如在HTTP、CSS和SMTP中传输二进制代码或图片，以及一些较长的标识信息。</p>
-
-            </div>
-            
-              <div class="tag-container">
-                
-                  <a href="http://coolcui.github.io/tag/T7Kw7_8LK" class="tag">
-                    技术
-                  </a>
-                
-              </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="http://coolcui.github.io/post/ru-he-zuo-hao-seo-ti-gao-wang-zhan-pai-ming">
-                  <h3 class="post-title">
-                    如何做好SEO提高网站排名？
-                  </h3>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://coolcui.github.io/post/cha-li-mang-ge-wo-suo-zhi-dao-zui-you-yong-de-dao-li-he-tai-du">
+                  <h2 class="post-title">查理·芒格：我所知道最有用的道理和态度</h2>
                 </a>
+                <div class="post-date">
+                  2019-04-24
+                </div>
+                <div class="post-abstract">
+                  <p>想要获得某样东西 那就让自己配得上它
+正确的爱应该以仰慕为基础
+只有你自己学习了学习的方法之后才能有所进步
+不断学习各学科最重要的知识点并不断实践它们</p>
+
+                </div>
               </div>
-            
+              
+            </article>
+          
 
-            
-
-          </div>
+          <div class="pagination-container">
+  
+    <a href="http://coolcui.github.io/" class="prev"><i class="icon-arrow-ios-back-outline"></i> 上一页</a>
+  
+  
+</div>
 
         </div>
       </div>
