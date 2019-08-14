@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>GitHub最常用的Git命令总结 | 知行合一</title>
+<meta name="description" content="那我自己来吧">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://coolcui.github.io/favicon.ico?v=1565761116139">
+<link rel="stylesheet" href="http://coolcui.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://coolcui.github.io">
+        <img src="http://coolcui.github.io/images/avatar.png?v=1565761116139" class="site-logo">
+        <h1 class="site-title">知行合一</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      那我自己来吧
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">himi</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">GitHub最常用的Git命令总结</h2>
+            <div class="post-date">2019-08-14</div>
+            
+            <div class="post-content">
+              <p>下面是GitHub最常用的Git命令总结：</p>
+<p>SETUP
+Configuring user information used across all local repositories
+配置适用于所有本地存储库的用户信息
+git config --global user.name &quot;[firstname lastname]&quot;
+set a name that is identifiable for credit when review version history
+git config --global user.email &quot;[valid-email]&quot;
+set an email address that will be associated with each history marker
+git config --global color.ui auto
+set automatic command line coloring for Git for easy reviewing</p>
+<!-- more -->
+<p>SETUP &amp; INIT
+Configuring user information, initializing and cloning repositories
+配置用户信息，初始化和克隆存储库
+git init
+initialize an existing directory as a Git repository
+git clone [url]
+retrieve an entire repository from a hosted location via URL</p>
+<p>STAGE &amp; SNAPSHOT
+Working with snapshots and the Git staging area
+快照和Git暂存区
+git status
+show modified files in working directory, staged for your next commit
+git add [file]
+add a file as it looks now to your next commit (stage)
+git reset [file]
+unstage a file while retaining the changes in working directory
+git diff
+diff of what is changed but not staged
+git diff --staged
+diff of what is staged but not yet commited
+git commit -m &quot;[descriptive message]&quot;
+commit your staged content as a new commit snapshot</p>
+<p>BRANCH &amp; MERGE
+Isolating work in branches, changing context, and integrating changes
+分支和合并。分支隔离、改变上下文和集成修改
+git branch
+list your branches. a * will appear next to the currently active branch
+git branch [branch-name]
+create a new branch at the current commit
+git checkout
+switch to another branch and check it out into your working directory
+git merge [branch]
+merge the specified branch’s history into the current one
+git log
+show all commits in the current branch’s history</p>
+<p>INSPECT &amp; COMPARE
+Examining logs, diffs and object information
+检查和比较。检查日志、版本差异和对象信息
+git log
+show the commit history for the currently active branch
+git log branchB..branchA
+show the commits on branchA that are not on branchB
+git log --follow [file]
+show the commits that changed file, even across renames
+git diff branchB...branchA
+show the diff of what is in branchA that is not in branchB
+git show [SHA]
+show any object in Git in human-readable format</p>
+<p>TRACKING PATH CHANGES
+Versioning file removes and path changes
+跟踪路径修改。版本文件修改和路径修改
+git rm [file]
+delete the file from project and stage the removal for commit
+git mv [existing-path] [new-path]
+change an existing file path and stage the move
+git log --stat -M
+show all commit logs with indication of any paths that moved</p>
+<p>IGNORING PATTERNS
+Preventing unintentional staging or commiting of files
+忽略不需要提交的文件。以防止无意的暂存或文件提交
+logs/
+<em>.notes
+pattern</em>/
+Save a file with desired paterns as .gitignore with either direct string
+matches or wildcard globs.
+git config --global core.excludesfile [file]
+system wide ignore patern for all local repositories</p>
+<p>SHARE &amp; UPDATE
+Retrieving updates from another repository and updating local repos
+从另一个存储库获取更新并更新本地存储库
+git remote add [alias] [url]
+add a git URL as an alias
+git fetch [alias]
+fetch down all the branches from that Git remote
+git merge [alias]/[branch]
+merge a remote branch into your current branch to bring it up to date
+git push [alias] [branch]
+Transmit local branch commits to the remote repository branch
+git pull
+fetch and merge any commits from the tracking remote branch</p>
+<p>REWRITE HISTORY
+Rewriting branches, updating commits and clearing history
+重写分支、更新提交和清除历史
+git rebase [branch]
+apply any commits of current branch ahead of specified one
+git reset --hard [commit]
+clear staging area, rewrite working tree from specified commit</p>
+<p>TEMPORARY COMMITS
+Temporarily store modified, tracked files in order to change branches
+保存临时修改的文件
+git stash
+Save modified and staged changes
+git stash list
+list stack-order of stashed file changes
+git stash pop
+write working from top of stash stack
+git stash drop
+discard the changes from top of stash stack</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="http://coolcui.github.io/tag/T7Kw7_8LK" class="tag">
+                    技术
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://coolcui.github.io/post/yi-fen-chuang-shi-ren-liao-jie-tou-zi-zhe-de-zhi-nan">
+                  <h3 class="post-title">
+                    一份创始人了解投资者的指南
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
